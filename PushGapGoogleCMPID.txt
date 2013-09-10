@@ -1,0 +1,35 @@
+https://code.google.com/apis/console/?pli=1#project:447745035223:services
+
+Serv Key:
+
+Key for server apps (with IP locking)
+
+API key:	
+AIzaSyBlW_WFq615ZalVxdNhqFy5LFtZ2uRpFbM
+
+IPs:	
+Any IP allowed
+
+Activated on:	Sep 2, 2013 7:25 AM
+
+Activated by:	 diguet.jonathan@gmail.com – you
+
+
+
+Key for browser apps (with referers)
+API key:	
+AIzaSyDTAWs_d8qfQXmxfg_rtpJl62SSMD4z0kU
+Referers:	
+Any referer allowed
+Activated on:	Sep 2, 2013 7:22 AM
+Activated by:	 diguet.jonathan@gmail.com – you
+
+I/Web Console( 7857): Regid APA91bECPwy_F5iOgimiguv785ka8Qh1fgBAIFuoEEBO7FXBTQGI
+EwlDKmKud-n8g_f-srb255WfHr3H4FBcznWBxEQugbeFfsHVS-4HFAqEf31i0Z3oX1Ly8S8CUU6qjaez
+VxGYYzSCus8UvCojdp3IDsw6-0S3eg:67
+ Regid APA
+5WfHr3H4F
+sw6-0S3eg
+D/CordovaLog( 7857): file:///android_asset/www/index.js: Line 67 : Regid APA91bE
+CPwy_F5iOgimiguv785ka8Qh1fgBAIFuoEEBO7FXBTQGIEwlDKmKud-n8g_f-srb255WfHr3H4FBcznW
+BxEQugbeFfsHVS-4HFAqEf31i0Z3oX1Ly8S8CUU6qjaezVxGYYzSCus8UvCojdp3IDsw6-0S3eg
