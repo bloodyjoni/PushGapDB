@@ -47,18 +47,14 @@ var app = {
 			pushRegister();
 			// used to unregister the device
 			document.addEventListener("backbutton", onBackButton, false);
-
-
 		},
 		// Update DOM on a Received Event
-
 		receivedEvent: function(id) {
 			var parentElement = document.getElementById(id);
 			var listeningElement = parentElement.querySelector('.listening');
 			var receivedElement = parentElement.querySelector('.received');
 			pushNotification = window.plugins.pushNotification;
 		
-
 			listeningElement.setAttribute('style', 'display:none;');
 			receivedElement.setAttribute('style', 'display:block;');
 			
