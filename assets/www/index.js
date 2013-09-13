@@ -19,7 +19,14 @@
 //pushPlugin global variable
 var pushNotification;
 var regid;
+//Push configuration variable
+var PConf={
+sendID:"447745035223",
 
+addTLink: "http://www.proyectored.com.ar/mobile/addtoken.php?token=",
+deleteTLink: "http://www.proyectored.com.ar/mobile/deletetoken.php?token="
+
+}
 
 var app = {
 		// Application Constructor
@@ -76,7 +83,7 @@ var app = {
 
 function pushRegister(){
 
-	pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"447745035223","ecb":"onNotificationGCM"});
+	pushNotification.register(app.successHandler, app.errorHandler,{"senderID":PConf.sendID,"ecb":"onNotificationGCM"});
 
 }
 
@@ -111,7 +118,7 @@ function  onNotificationGCM(e) {
 			console.log("Regid " + e.regid);
 			alert('registration id = '+e.regid);
 			var sVar1 = encodeURIComponent(e.regid);
-			xhr.open("GET", "http://www.proyectored.com.ar/mobile/addtoken.php?token="+sVar1, false);
+			xhr.open("GET",PConf.addTLink+sVar1, false);
 			xhr.send(null);
 			regid=e.regid;// store the token value
 			console.log("access remote server done")
@@ -149,7 +156,7 @@ function onBackButton(e){
 		alert('registration id = '+ regid);
 		var sVar1 = encodeURIComponent(regid);
 		console.log(sVar1);
-		xhr.open("GET", "http://www.proyectored.com.ar/mobile/deletetoken.php?token="+sVar1, false);
+		xhr.open("GET", PConf.deleteTLink+sVar1, false);
 		xhr.send(null);
 		pushNotification.unregister(app.successHandler,app.errorHandler);
 		navigator.app.exitApp();
