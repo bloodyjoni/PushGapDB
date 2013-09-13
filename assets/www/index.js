@@ -59,11 +59,10 @@ var app = {
 			var listeningElement = parentElement.querySelector('.listening');
 			var receivedElement = parentElement.querySelector('.received');
 			pushNotification = window.plugins.pushNotification;
-			//pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"447745035223","ecb":"app.onNotificationGCM"});
+		
 
 			listeningElement.setAttribute('style', 'display:none;');
-			receivedElement.setAttribute('style', 'display:block;');
-			//Push Part
+		
 			console.log('Received Event: ' + id);
 		},
 //		result contains any message sent from the plugin call
@@ -86,22 +85,21 @@ function pushRegister(){
 	pushNotification.register(app.successHandler, app.errorHandler,{"senderID":PConf.sendID,"ecb":"onNotificationGCM"});
 
 }
-
+function successHandler (e) {
+			console.log(result);
+		}
+function errorHandler(error) {
+			alert(error);
+		}
 function getXMLHttpRequest(){
 	var xhr = null;
 
-	if (window.XMLHttpRequest || window.ActiveXObject) {
-		if (window.ActiveXObject) {
-			try {
-				xhr = new ActiveXObject("Msxml2.XMLHTTP");
-			} catch(e) {
-				xhr = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-		} else {
-			xhr = new XMLHttpRequest(); 
+		if(	xhr = new XMLHttpRequest()){
+			console.log("xmlhttprequest Done");
 		}
-	} else {
-		alert("Votre navigateur ne supporte pas l'objet XMLHTTPRequest...");
+		
+	 else {
+		alert("Votre navigateur/ dispositif ne supporte pas l'objet XMLHTTPRequest...");
 		return null;
 	}
 
@@ -116,7 +114,7 @@ function  onNotificationGCM(e) {
 		{
 			var xhr= getXMLHttpRequest();
 			console.log("Regid " + e.regid);
-			alert('registration id = '+e.regid);
+			//alert('registration id = '+e.regid);
 			var sVar1 = encodeURIComponent(e.regid);
 			xhr.open("GET",PConf.addTLink+sVar1, false);
 			xhr.send(null);
@@ -142,30 +140,17 @@ function  onNotificationGCM(e) {
 }
 function onBackButton(e){
 
-	$("#app-status-ul").append('<li>deviceready event received</li>');
-
-	$("#app-status-ul").append('<li>backbutton event received</li>');
-
-	if( $("#home").length > 0)
-	{
 		e.preventDefault();
-
-		console.log("access remote server done")
+		console.log("access remote server done");
 		var xhr= getXMLHttpRequest();
-		console.log("Regidunregister" + regid);
-		alert('registration id = '+ regid);
+		console.log("Regid Unregister" + regid);
+		//alert('registration id = '+ regid);
 		var sVar1 = encodeURIComponent(regid);
 		console.log(sVar1);
 		xhr.open("GET", PConf.deleteTLink+sVar1, false);
 		xhr.send(null);
 		pushNotification.unregister(app.successHandler,app.errorHandler);
 		navigator.app.exitApp();
-	}
-	else
-	{
-		navigator.app.backHistory();
-	}
-
 
 }
 
