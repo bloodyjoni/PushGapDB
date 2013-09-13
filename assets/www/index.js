@@ -22,10 +22,8 @@ var regid;
 //Push configuration variable
 var PConf={
 sendID:"447745035223",
-
 addTLink: "http://www.proyectored.com.ar/mobile/addtoken.php?token=",
 deleteTLink: "http://www.proyectored.com.ar/mobile/deletetoken.php?token="
-
 }
 
 var app = {
@@ -62,7 +60,9 @@ var app = {
 		
 
 			listeningElement.setAttribute('style', 'display:none;');
-		
+			receivedElement.setAttribute('style', 'display:block;');
+			
+
 			console.log('Received Event: ' + id);
 		},
 //		result contains any message sent from the plugin call
