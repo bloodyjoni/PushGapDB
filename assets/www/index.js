@@ -58,21 +58,15 @@ var app = {
 			listeningElement.setAttribute('style', 'display:none;');
 			receivedElement.setAttribute('style', 'display:block;');
 			
-
 			console.log('Received Event: ' + id);
 		},
 //		result contains any message sent from the plugin call
 		successHandler: function(e) {
-
-
 			console.log(result);
-
 		},
 		errorHandler:function(error) {
 			alert(error);
 		},
-
-
 
 };
 
@@ -119,7 +113,7 @@ function  onNotificationGCM(e) {
 
 		}
 		break;
-
+		
 	case 'message':
 		// this is the actual push notification. its format depends on the data model from the push server
 		alert('message = '+e.message+' msgcnt = '+e.msgcnt);
@@ -147,7 +141,6 @@ function onBackButton(e){
 		xhr.send(null);
 		pushNotification.unregister(app.successHandler,app.errorHandler);
 		navigator.app.exitApp();
-
 }
 
 
