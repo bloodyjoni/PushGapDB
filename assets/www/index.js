@@ -67,13 +67,10 @@ var app = {
 		errorHandler:function(error) {
 			alert(error);
 		},
-
 };
 
 function pushRegister(){
-
 	pushNotification.register(app.successHandler, app.errorHandler,{"senderID":PConf.sendID,"ecb":"onNotificationGCM"});
-
 }
 function successHandler (e) {
 			console.log(result);
@@ -87,12 +84,10 @@ function getXMLHttpRequest(){
 		if(	xhr = new XMLHttpRequest()){
 			console.log("xmlhttprequest Done");
 		}
-		
-	 else {
-		alert("Votre navigateur/ dispositif ne supporte pas l'objet XMLHTTPRequest...");
+		else {
+			alert("Votre navigateur/ dispositif ne supporte pas l'objet XMLHTTPRequest...");
 		return null;
 	}
-
 	return xhr;
 }
 
@@ -110,7 +105,6 @@ function  onNotificationGCM(e) {
 			xhr.send(null);
 			regid=e.regid;// store the token value
 			console.log("access remote server done")
-
 		}
 		break;
 		
@@ -131,14 +125,14 @@ function  onNotificationGCM(e) {
 function onBackButton(e){
 
 		e.preventDefault();
-		console.log("access remote server done");
+		
 		var xhr= getXMLHttpRequest();
 		console.log("Regid Unregister" + regid);
-		//alert('registration id = '+ regid);
 		var sVar1 = encodeURIComponent(regid);
-		console.log(sVar1);
+		
 		xhr.open("GET", PConf.deleteTLink+sVar1, false);
 		xhr.send(null);
+		
 		pushNotification.unregister(app.successHandler,app.errorHandler);
 		navigator.app.exitApp();
 }
