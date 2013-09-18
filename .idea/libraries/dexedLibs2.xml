@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/cordova-2.9.0-ebc1589338882b5277d38c66def85613.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-support-v4-0fcbd2b3074c216feb8627a40f86e5a0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/gcm-252eac2056c7f49801868aa167f89829.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/cordova-2.9.0-4fffc159c388019900919fc08314f3c2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/gcm-db62b4ca80e09ce6df96ad5d6c1d5ec6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/gcm-7694db07bc94685476dc134587f7bffc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/cordova-2.9.0-fb5a21249f6212e46249f9a2709e72d8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-support-v4-5762feedf518522fac09c1f17cac6424.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-support-v4-48fd58511a582aead52041c7641f1776.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -3,8 +3,10 @@
  <head>
   <title>PhoneGap</title>
   <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-   <script type="text/javascript" charset="utf-8" src="index.js"></script>
    <script type="text/javascript" src="PushNotification.js"></script>
+     <script type="text/javascript" charset="utf-8" src="Pushnotif.js"></script>
+   <script type="text/javascript" charset="utf-8" src="index.js"></script>
+  
 	<script src="jQuery.js"></script>
  </head>
  <body>
@@ -16,7 +18,9 @@
 	<div id="home">
 	</div>
    <script type="text/javascript">
+    PushConf.initialize();
             app.initialize();
+           
    </script>
  </body>
 </html>
